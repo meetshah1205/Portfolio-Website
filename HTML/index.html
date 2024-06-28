@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>Meet Shah</title>
+
+  <style>
+    body {
+      background-color: #1c1e21;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      margin: 0;
+      transition: opacity 0.6s ease-in-out;
+      overflow-x: hidden;
+      overflow-y: visible;
+          }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .navbar-brand .meet,
+    .navbar-brand .shah {
+      transition: all ease-in 1s;
+    }
+
+    .navbar-brand:hover .meet {
+      color: #ff6f61;
+    }
+
+    .navbar-brand:hover .shah {
+      color: #d0736b;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-link:hover {
+      color: #ff6f61 !important;
+    }
+
+    .navbar {
+      background-color: #1c1e21;
+    }
+
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .greet {
+      font-size: 3rem;
+      font-weight: 700;
+      background-image: linear-gradient(
+        to right,
+        blue,
+        purple,
+        magenta,
+        cyan,
+        yellow,
+        orange,
+        red
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
+      cursor: default;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    /* Inline SVG for custom cursors */
+    #about {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>'), auto;
+    }
+
+    #projects {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.83-.47-5.08-2.72-5.55-5.55H5v-2h2v-2H5v-2h2V7h2v2h2V7h2v2h2V7h2v2h2V7h2v2h-2v2h2v2h-2v-2h-2v2h-2v-2H9v2H7v-2H5v2H4.07c.47 2.83 2.72 5.08 5.55 5.55V19h2v1.93z"/></svg>'), auto;
+    }
+
+    #contact {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M20 8l-8 5-8-5V6l8 5 8-5v2zm-8 7l-8-5v6h16v-6l-8 5z"/></svg>'), auto;
+    }
+
+    #software {
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M21 8h-6l-3-3H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM5 6h6.17L13 8H5V6zm0 12v-2h5v2H5zm0-4v-2h7v2H5zm12 4h-5v-2h5v2z"/></svg>'), auto;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateY(-10%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .zoom-in {
+      animation: zoomIn 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body class="zoom-in">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <span class="meet">Meet</span> <span class="shah">Shah</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="about" class="nav-link" href="./about.html">
+              <i class="fas fa-user"></i> About Me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="projects" class="nav-link" href="./projects.html">
+              <i class="fas fa-project-diagram"></i> Projects
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="contact" class="nav-link" href="./contact.html">
+              <i class="fas fa-envelope"></i> Contact
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="software" class="nav-link" href="./software.html">
+              <i class="fas fa-laptop-code"></i> Software I Use
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h3 class="greet">Hello Fellow Mortal...
+  </h3>
+    <div class="greet" style="color: white; background-color: transparent;">Click on one of the navbar items</div>
+  
+
+  <!-- Bootstrap JS dependencies -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-LtrjvnR4/Jqs8+9z9vB1sI0e/ZxAVFTcEpcA8+W+f/qmfDEJ+zRf5iWpGYNFJkCs"
+    crossorigin="anonymous"
+  ></script>
+  <script src="../JS/index.js"></script>
+</body>
+</html>
