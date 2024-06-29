@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Example</title>
+</head>
+<body>
+<div id="html">Hover over me</div>
+<p id="htmlp">HTML</p>
+
+<script>
+  var htmlLogo = document.getElementById('html');
+  var htmlp = document.getElementById('htmlp');
+
+  htmlLogo.addEventListener('mouseenter', function(e) {
+    htmlp.textContent = '<HTML>';
+  });
+
+  htmlLogo.addEventListener('mouseleave', function(e) {
+    htmlp.textContent = 'HTML';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar System Animation</title>
+</head>
+<body>
+<canvas id="solar-system" width="800" height="600"></canvas>
+
+<script>
+    const canvas = document.getElementById("solar-system");
+    const context = canvas.getContext("2d");
+
+    const sun = { x: canvas.width / 2, y: canvas.height / 2, radius: 30, color: "yellow" };
+    const planets = [
+        { name: "Mercury", radius: 5, distance: 100, angle: 0, color: "gray" },
+        { name: "Venus", radius: 10, distance: 150, angle: 0, color: "orange" },
+        { name: "Earth", radius: 12, distance: 200, angle: 0, color: "blue" },
+        { name: "Mars", radius: 9, distance: 300, angle: 0, color: "red" }
+    ];
+
+    function animate() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the Sun
+        context.beginPath();
+        context.arc(sun.x, sun.y, sun.radius, 0, Math.PI * 2);
+        context.fillStyle = sun.color;
+        context.fill();
+
+        // Draw the planets and their orbits
+        planets.forEach(planet => {
+            planet.angle += 0.005;  // Adjust the speed of revolution
+            const planetX = sun.x + planet.distance * Math.cos(planet.angle);
+            const planetY = sun.y + planet.distance * Math.sin(planet.angle);
+
+            // Draw the planet
+            context.beginPath();
+            context.arc(planetX, planetY, planet.radius, 0, Math.PI * 2);
+            context.fillStyle = planet.color;
+            context.fill();
+
+            // Draw the orbit path
+            context.strokeStyle = "rgba(0, 0, 0, 0.2)";
+            context.beginPath();
+            context.arc(sun.x, sun.y, planet.distance, 0, Math.PI * 2);
+            context.stroke();
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
+</body>
+</html>
