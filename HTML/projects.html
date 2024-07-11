@@ -1,269 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <meta name="keywords" content="portfolio website projects HTML CSS JS C Python programmer">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Meet Shah | Projects</title>
-    <style>
-      body {
-        background-color: #1c1e21;
-        font-family: "Poppins", sans-serif;
-        color: #fff;
-        margin: 0;
-        padding-top: 70px; /* Adjusted for fixed navbar */
-      }
-      .navbar-brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-      .navbar-brand .meet,
-      .navbar-brand .shah {
-        transition: all ease-in 1s;
-      }
-      .navbar-brand:hover .meet {
-        color: #ff6f61;
-      }
-      .navbar-brand:hover .shah {
-        color: #d0736b;
-      }
-      .nav-link {
-        font-weight: 500;
-        transition: color 0.3s ease-in-out;
-        margin: 0 1rem;
-        padding: 0.5rem 1rem;
-      }
-      .nav-link:hover {
-        color: #ff6f61 !important;
-      }
-      .navbar {
-        background-color: #1c1e21;
-      }
-      .navbar-nav {
-        margin: 0 auto;
-      }
-      .content {
-        padding: 2rem;
-      }
-      .about-section {
-        margin-top: 50px;
-      }
-      .about-section h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .about-section p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-      .skill-section {
-        margin-top: 50px;
-      }
-      .skill-section h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .skill-list {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-      }
-      .skill-list li {
-        flex: 1;
-        text-align: center;
-      }
-      .skill-list i {
-        font-size: 3rem;
-        color: #6c757d;
-        transition: color 0.3s ease-in-out;
-      }
-      .skill-list i:hover {
-        color: #ff6f61;
-      }
-      .experience-section {
-        margin-top: 50px;
-      }
-      .experience-section h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .experience-list {
-        list-style-type: none;
-        padding: 0;
-      }
-      .experience-item {
-        margin-bottom: 1.5rem;
-      }
-      .experience-item .title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #d0736b;
-        margin-bottom: 0.5rem;
-      }
-      .experience-item .company {
-        font-size: 1.1rem;
-        color: #6c757d;
-      }
-      .experience-item .date {
-        font-size: 0.9rem;
-        color: #6c757d;
-      }
-      .extra-details {
-        margin-top: 50px;
-      }
-      .extra-details h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .extra-details ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      .extra-details li {
-        margin-bottom: 0.5rem;
-      }
-      @keyframes zoomIn {
-        0% {
-          transform: scale(0.5);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-      .zoom-in {
-        animation: zoomIn 0.6s ease-in-out;
-      }
-      #about {
-        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>'),
-          auto;
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-D/r9U9Ue9+V9xm5k6379H+i8N3oU8x8k888CKX5lsFk88rO07O3I0I4jFrPVurvX"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/88cf7528db.js" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Meet Shah | Projects</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #1c1e21;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      padding-top: 70px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .navbar-brand .meet,
+    .navbar-brand .shah {
+      transition: all ease-in 1s;
+    }
+
+    .navbar-brand:hover .meet {
+      color: #ff6f61;
+    }
+
+    .navbar-brand:hover .shah {
+      color: #d0736b;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-link:hover {
+      color: #ff6f61 !important;
+    }
+
+    .navbar {
+      background-color: #1c1e21;
+    }
+
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .content {
+      padding: 2rem;
+    }
+
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
       }
 
-      #projects {
-        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.83-.47-5.08-2.72-5.55-5.55H5v-2h2v-2H5v-2h2V7h2v2h2V7h2v2h2V7h2v2h2V7h2v2h-2v2h2v2h-2v-2h-2v2h-2v-2H9v2H7v-2H5v2H4.07c.47 2.83 2.72 5.08 5.55 5.55V19h2v1.93z"/></svg>'),
-          auto;
+      100% {
+        transform: scale(1);
+        opacity: 1;
       }
+    }
 
-      #contact {
-        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M20 8l-8 5-8-5V6l8 5 8-5v2zm-8 7l-8-5v6h16v-6l-8 5z"/></svg>'),
-          auto;
-      }
+    .zoom-in {
+      animation: zoomIn 0.6s ease-in-out;
+    }
 
-      #software {
-        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="white" d="M21 8h-6l-3-3H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM5 6h6.17L13 8H5V6zm0 12v-2h5v2H5zm0-4v-2h7v2H5zm12 4h-5v-2h5v2z"/></svg>'),
-          auto;
-      }
-    </style>
-  </head>
-  <body class="zoom-in">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">
-          <span class="meet">Meet</span> <span class="shah">Shah</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a id="about" class="nav-link" href="./about.html">
-                <i class="fas fa-user"></i> About Me
-              </a>
-            </li>
-            <li class="nav-item">
-              <a id="projects" class="nav-link" href="#projects-section">
-                <i class="fas fa-project-diagram"></i> Projects
-              </a>
-            </li>
-            <li class="nav-item">
-              <a id="contact" class="nav-link" href="./contact.html">
-                <i class="fas fa-envelope"></i> Contact
-              </a>
-            </li>
-            <li class="nav-item">
-              <a id="software" class="nav-link" href="./software-i-use.html">
-                <i class="fas fa-laptop-code"></i> Software I Use
-              </a>
-            </li>
-          </ul>
+    .spidey:hover {
+      cursor: url("../Projects/Spiderman-Offline-Game/images/spider-head.png"), pointer;
+      padding: 3px;
+      transition: all ease 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-2xl font-bold" href="./index.html">Meet Shah</a>
+      <div class="hidden md:flex space-x-6">
+        <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
+        <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
+        <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
+        <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
+      </div>
+      <button class="md:hidden text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="projects-section" class="container pt-5">
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                src="../Assets/Imgs/Projects-Screenshots/QR-Code-Generator-Screenshot.png"
+                alt="QR-CODE-GENERATOR 404 :/">
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">QR Code Generator</h1>
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">DESCRIPTION</h2>
+                <p class="leading-relaxed mb-3">Quick Response codes (QR Codes) play a very important role in our daily
+                  life. Payment with UPI in India has a very dire need of QR codes. In this fast age, QR codes serve a
+                  very important role for scan-and-use things.</p>
+                <div class="flex items-center flex-wrap">
+                  <a target="_blank" class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0" href="">Check it
+                    out
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </section>
+  </div>
 
-    <div id="projects-section">
-        <section class="text-gray-400 bg-gray-900 body-font">
-            <div class="container px-5 py-24 mx-auto">
-              <div class="flex flex-wrap -m-4">
-                <div class="p-4 md:w-1/3">
-                  <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
-                    <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="../Assets/Imgs/Projects-Screenshots/QR-Code-Generator-Screenshot.png" alt="blog"> 
-                    <!-- !Replace the above with an actual image -->
-                    <div class="p-6">
-                      <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
-                      <h1 class="title-font text-lg font-medium text-white mb-3">QR Code Generator</h1>
-                      <!-- !Write the above name of the project here -->
-                      <p class="leading-relaxed mb-3">Quick Response codes (QR Codes) play a very important role in our daily life. Payment with UPI in India has a very dire need of QR codes. In this fast age, QR codes serve a very important role for scan-and-use things.</p>
-                      <!-- !Replace with the description -->
-                      <div class="flex items-center flex-wrap ">
-                        <a class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0" href="../Projects/QR-Code-Generator/index.html">Check it out
-                            <!-- !Put the path to the actual project in href -->
-                          <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14"></path>
-                            <path d="M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+
+  <!-- -------------------------------------------Next Project --------------------------------------------------------------------------------------- -->
+  <div id="projects-section" class="container pt-5">
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                src="../Assets/Imgs/Projects-Screenshots/Quizz-App-Screenshot.png" alt="QUIZZ-APP 404 :/">
+
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Quizz App</h1>
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">DESCRIPTION</h2>
+                <p class="leading-relaxed mb-3">Quizzes are important for learning, this quizz has such questions and
+                  answers that you will get atmost a 4/5, it is impossible to get a 5/5 on this as it is programmed to
+                  have an answers that is not even in the options.</p>
+                <div class="flex items-center flex-wrap ">
+                  <a target="_blank" class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0"
+                    href="../Projects/Quizz-App/index.html">Check it out
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
                 </div>
+              </div>
             </div>
-          </section>
-        
+          </div>
+        </div>
+    </section>
+  </div>
+  <!-- -------------------------------------------Next Project --------------------------------------------------------------------------------------- -->
+  <div id="projects-section" class="container pt-5">
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center"
+                src="../Assets/Imgs/Projects-Screenshots/Solar-System-Animation-Screenshot.png"
+                alt="SOLAR-SYSTEM-ANIMATION 404 :/">
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Solar System Animation (Inner planets only)
+                </h1>
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">DESCRIPTION</h2>
+                <p class="leading-relaxed mb-3">Our solar system is a beautiful place, this animation depicts the
+                  animation of the inner solid planets of this beautiful solar system.
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1"
+                  style="color: rgb(175, 67, 67);">NOTE:</h2>The orbit of Venus is wrong as it rotates in the opposite
+                direction of Earth. Also I know that the rotation of the planets is not circular, it's elliptical and
+                the time taken by the planet to complete the rotation is not the same for every planet. But it's ok as
+                this was just my third HTML/CSS/JS project.</p> <br>
+                <div class="flex items-center flex-wrap ">
+                  <a target="_blank" class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0"
+                    href="../Projects/Solar-System-Animation/index.html">Check it out
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+
+  <!-- -------------------------------------------Next Project --------------------------------------------------------------------------------------- -->
+  <div id="projects-section" class="container pt-5">
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+              <video loop muted autoplay class="lg:h-48 md:h-36 w-full object-cover object-center">
+                <source src="../Assets/Imgs/Projects-Screenshots/Vids/Spiderman-Offline-Game.mp4">
+              </video>
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Spider-Man Offline shooter Game</h1>
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">DESCRIPTION</h2>
+                <p class="leading-relaxed mb-3">We all know <a target="_blank" class="spidey"
+                    style="color: rgb(194, 78, 78);" href="https://en.wikipedia.org/wiki/Spider-Man">Spider-Man</a>. It
+                  is a very popular fictional Marvel Comics superhero. There are a lot of different Spider-Man games in
+                  the market and yes this is not even in the compitition for the spot of a proper game, but it is a good
+                  game to pass your time.</p>
+                <div class="flex items-center flex-wrap ">
+                  <a target="_blank" class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0" href="../Projects/Spiderman-Offline-Game/index.html">Check it
+                    out
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+  <!-- -------------------------------------------Next Project --------------------------------------------------------------------------------------- -->
+  <div id="projects-section" class="container pt-5">
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+              <video loop muted autoplay class="lg:h-48 md:h-36 w-full object-cover object-center">
+                <source src="../Assets/Imgs/Projects-Screenshots/Vids/Stopwatch.mp4">
+              </video>
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Stopwatch</h1>
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">DESCRIPTION</h2>
+                <p class="leading-relaxed mb-3">A stopwatch is a very important thing for everyone, however not everyone has a phisical stopwatch. So people use stopwatches in their smartphones or some stopwatches on the internet, just like this.</p>
+                <div class="flex items-center flex-wrap ">
+                  <a class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0" href="../Projects/Stopwatch/index.html">Check it out
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
     </div>
-    <!-- Bootstrap JS dependencies -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-LtrjvnR4/Jqs8+9z9vB1sI0e/ZxAVFTcEpcA8+W+f/qmfDEJ+zRf5iWpGYNFJkCs"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Local JS -->
-    <script src="../JS/index.js"></script>
-    <script src="../JS/removeContextMenu.js"></script>
-  </body>
+  <!-- -------------------------------------------Next Project --------------------------------------------------------------------------------------- -->
+  <div id="projects-section" class="container pt-5">
+    <section class="text-gray-400 bg-gray-900 body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 md:w-1/3">
+            <div class="h-full border-2 border-gray-800 rounded-lg overflow-hidden">
+              <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="../Assets/Imgs/Projects-Screenshots/TodoWey.png" alt="blog"> 
+              <div class="p-6">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">NAME</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">ToDoWey | My To-Do List</h1>
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">DESCRIPTION</h2>
+                <p class="leading-relaxed mb-3">I mean a To-Do app is one of the projects that can be made in any programming language or any platform.</p>
+                <div class="flex items-center flex-wrap ">
+                  <a class="text-purple-400 inline-flex items-center md:mb-2 lg:mb-0" href="../Projects/ToDowey/index.html">Check it out
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    </div>
+  <!-- Bootstrap JS dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <!-- Local JS -->
+  <script src="../JS/index.js"></script>
+  <script src="../JS/removeContextMenu.js"></script>
+</body>
+
+
+
+</html>
+
+
 </html>
