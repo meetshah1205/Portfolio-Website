@@ -95,7 +95,27 @@
       animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
       cursor: default;
     }
-
+    .myname:hover {
+      font-weight: 700;
+      background-image: linear-gradient(to right,
+          blue,
+          purple,
+          magenta,
+          cyan,
+          yellow,
+          orange,
+          red);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      cursor: pointer !important;
+      transition: all ease-in-out 1.5s
+    }
     h3 {
       font-size: 1.5rem;
       font-weight: 500;
@@ -103,45 +123,13 @@
     }
 
    
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    @keyframes slideIn {
-      0% {
-        transform: translateY(-10%);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes zoomIn {
-      0% {
-        transform: scale(0.5);
-        opacity: 0;
-      }
-
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
   </style>
 </head>
 
 <body>
   <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
     <div class="container mx-auto flex justify-between items-center">
-      <a class="text-2xl font-bold" href="./index.html">Meet Shah</a>
+      <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
       <div class="hidden md:flex space-x-6">
         <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
         <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>

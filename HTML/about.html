@@ -59,6 +59,19 @@
       .content {
         padding: 2rem;
       }
+      #compilation {
+        border-radius: 25px;
+      }
+      #compilation:hover{
+        margin: 5px;
+        transition: all ease-in-out 0.5s;
+        border-radius: 50px;
+      }
+      #compilation-container{
+        display: grid;
+        place-items: center;
+        background-color: transparent;
+      }
       .about-section {
         margin-top: 50px;
       }
@@ -145,18 +158,12 @@
       .extra-details li {
         margin-bottom: 0.5rem;
       }
-      @keyframes zoomIn {
-        0% {
-          transform: scale(0.5);
-          opacity: 0;
-        }
-        100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
       .zoom-in {
         animation: zoomIn 0.6s ease-in-out;
+      }
+      #html:hover {
+        color: orangered;
+        transition: all ease 1s;
       }
       #css:hover {
         color: rgb(48, 48, 230) !important;
@@ -179,28 +186,51 @@
         transition: all ease 1s;
         color: rgb(36, 36, 176);
       }
-      
+          .myname:hover {
+      font-weight: 700;
+      background-image: linear-gradient(to right,
+          blue,
+          purple,
+          magenta,
+          cyan,
+          yellow,
+          orange,
+          red);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      cursor: pointer !important;
+      transition: all ease-in-out 1.5s
+    }
+
     </style>
   </head>
   <body>
     <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
       <div class="container mx-auto flex justify-between items-center">
-        <a class="text-2xl font-bold" href="./index.html">Meet Shah</a>
+        <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
         <div class="hidden md:flex space-x-6">
           <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
           <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
           <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
           <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
         </div>
-        <button class="md:hidden text-2xl focus:outline-none">
-          <i class="fas fa-bars"></i>
-        </button>
       </div>
     </nav>
   
 
-    
     <div class="content">
+      <div id="compilation-container">
+      <video id="compilation" height="auto" height="900" width="400">
+        <source src="../Assets/Vids/Compilation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
       <section id="about-section" class="about-section">
         <div class="container">
           <h2>About Me</h2>
@@ -291,5 +321,6 @@
     <!-- Local JS -->
     <script src="../JS/index.js"></script>
     <script src="../JS/removeContextMenu.js"></script>
+    <script src="../JS/playVideoOnHover.js"></script>
   </body>
 </html>

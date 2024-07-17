@@ -135,27 +135,36 @@
       0% {
         transform: scale(0);
         opacity: 0;
-        rotate: 200deg;
+        rotate: 100deg;
       }
 
       50% {
         transform: scale(0.5);
         opacity: 1;
-        rotate: 250deg;
+        rotate: 0deg;
       }
 
       55% {
+        transform: scale(300);
+        opacity: 1;
+        overflow: hidden;
+        rotate: 175deg;
+      }
+
+      60%{
+        transform: scale(202);
+        rotate: 250deg;
+      }
+
+      65% {
+        transform: scale(150);
+        rotate: 300deg;
+      }
+      75% {
         transform: scale(100);
         opacity: 1;
         overflow: hidden;
-        rotate: 255deg;
-      }
-
-      75% {
-        transform: scale(821);
-        opacity: 1;
-        overflow: hidden;
-        rotate: 300deg;
+        rotate: 350deg;
       }
 
       100% {
@@ -188,7 +197,7 @@
       font-family: "Poppins", sans-serif;
       text-align: center;
       cursor: pointer !important;
-      transition: all ease 1s
+      transition: all ease-in-out 1.5s
     }
 
     @media screen and (max-width: 800px) {
@@ -245,7 +254,7 @@
     </div>
   </nav>
   <div class="zoom-in">
-    <h3 class="greet">Hello Fellow Mortal...</h3>
+    <h3 class="greet">Welcome to Meet Shah's website...</h3>
   </div>
 
   <!-- Bootstrap JS dependencies -->
