@@ -1,198 +1,133 @@
 <!DOCTYPE html>
-<html lang="en" oncontextmenu="false">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta name="keywords" content="portfolio website projects HTML CSS JS C Python programmer">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-D/r9U9Ue9+V9xm5k6379H+i8N3oU8x8k888CKX5lsFk88rO07O3I0I4jFrPVurvX"
-    crossorigin="anonymous"></script>
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/88cf7528db.js" crossorigin="anonymous"></script>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Meet Shah | Projects</title>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #1c1e21;
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      padding-top: 70px;
-      overflow-y: visible;
-      overflow-x: hidden;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-
-    .navbar-brand .meet,
-    .navbar-brand .shah {
-      transition: all ease-in 1s;
-    }
-
-    .navbar-brand:hover .meet {
-      color: #ff6f61;
-    }
-
-    .navbar-brand:hover .shah {
-      color: #d0736b;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      transition: color 0.3s ease-in-out;
-      margin: 0 1rem;
-      padding: 0.5rem 1rem;
-    }
-
-    .nav-link:hover {
-      color: #ff6f61 !important;
-    }
-
-    .navbar {
-      background-color: #1c1e21;
-    }
-
-    .navbar-nav {
-      margin: 0 auto;
-    }
-
-    .content {
-      padding: 2rem;
-    }
-
-    .zoom-in {
-      animation: zoomIn 0.6s ease-in-out;
-    }
-
-    .spidey:hover {
-      cursor: url("../Projects/Spiderman-Offline-Game/images/spider-head.png"), pointer;
-      padding: 3px;
-      transition: all ease 1s;
-    }
-
-    svg {
-      width: 100%;
-      height: 100%;
-      visibility: hidden;
-    }
-
-    #button {
-      cursor: pointer;
-    }
-
-    span.download-btn {
-      position: relative;
-      display: inline-flex;
-      width: 180px;
-      height: 55px;
-      margin: 0 15px;
-      perspective: 1000px;
-      font-family: monospace;
-    }
-
-    span.download-btn a {
-      font-size: 19px;
-      letter-spacing: 1px;
-      transform-style: preserve-3d;
-      transform: translateZ(-25px);
-      transition: transform 0.25s;
-      font-family: inherit, sans-serif;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      z-index: 1;
-    }
-
-    span.download-btn a:before,
-    span.download-btn a:after {
-      position: absolute;
-      content: "Download...";
-      height: 55px;
-      width: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 5px solid black;
-      box-sizing: border-box;
-      border-radius: 5px;
-      backface-visibility: hidden;
-    }
-
-    span.download-btn a:before {
-      color: #fff;
-      background: #000;
-      transform: rotateY(0deg) translateZ(25px);
-    }
-
-    span.download-btn a:after {
-      color: #fff;
-      background: #333;
-      transform: rotateX(90deg) translateZ(25px);
-    }
-
-    span.download-btn a:hover {
-      transform: translateZ(-25px) rotateX(-90deg);
-    }
-
-    .myname:hover {
-      font-weight: 700;
-      background-image: linear-gradient(to right,
-          blue,
-          purple,
-          magenta,
-          cyan,
-          yellow,
-          orange,
-          red);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Poppins", sans-serif;
-      text-align: center;
-      cursor: pointer !important;
-      transition: all ease-in-out 1.5s
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
-    <div class="container mx-auto flex justify-between items-center">
-      <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
-      <div class="hidden md:flex space-x-6">
-        <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
-        <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
-        <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
-        <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Meet Shah | Projects</title>
+    <style>
+      body {
+        background-color: #1c1e21;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding-top: 70px; /* Adjusted for fixed navbar */
+      }
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      .navbar-brand .meet,
+      .navbar-brand .shah {
+        transition: all ease-in 1s;
+      }
+      .navbar-brand:hover .meet {
+        color: #ff6f61;
+      }
+      .navbar-brand:hover .shah {
+        color: #d0736b;
+      }
+      .nav-link {
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+        margin: 0 1rem;
+        padding: 0.5rem 1rem;
+      }
+      .nav-link:hover {
+        color: #ff6f61 !important;
+      }
+      .navbar {
+        background-color: #1c1e21;
+      }
+      .navbar-nav {
+        margin: 0 auto;
+      }
+      .content {
+        padding: 2rem;
+      }
+      .project-section {
+        margin-top: 50px;
+      }
+      .project-section h2 {
+        color: #ff6f61;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .project-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping */
+      }
+      .project-item {
+        flex: 1 1 calc(33.333% - 1rem); /* Three items per row with spacing */
+        margin: 0.5rem;
+        background-color: #2a2c2e;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      .project-item img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .project-item h3 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+      .project-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      @media (max-width: 768px) {
+        .project-item {
+          flex: 1 1 calc(50% - 1rem); /* Two items per row on smaller screens */
+        }
+      }
+      @media (max-width: 480px) {
+        .project-item {
+          flex: 1 1 100%; /* One item per row on very small screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
+        <div class="hidden md:flex space-x-6">
+          <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
+          <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
+          <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
+          <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
+        </div>
+        <div class="md:hidden">
+          <button class="text-gray-400 hover:text-white focus:outline-none focus:text-white" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
       </div>
-     
-    </div>
-  </nav>
+      <div class="md:hidden hidden mobile-nav">
+        <a id="about" class="block py-2 px-4 text-sm hover:text-gray-400" href="./about.html">About Me</a>
+        <a id="projects" class="block py-2 px-4 text-sm hover:text-gray-400" href="./projects.html">Projects</a>
+        <a id="contact" class="block py-2 px-4 text-sm hover:text-gray-400" href="./contact.html">Contact</a>
+        <a id="software" class="block py-2 px-4 text-sm hover:text-gray-400" href="./software.html">Software I Use</a>
+      </div>
+    </nav>
   <main>
 <div class="bg-gray-900">
   <div id="projects-section" class="container pt-5">
@@ -426,12 +361,20 @@
       </span> <br> <br> <br>
     </center>
   </div>
-</main>  <!-- Bootstrap JS dependencies -->
+</main>
+  <!-- Bootstrap JS dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
   <!-- Local JS -->
   <script src="../JS/index.js"></script>
   <script src="../JS/removeContextMenu.js"></script>
+  <!-- In file JS for responsiveness -->
+  <script>
+        function toggleMobileMenu() {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.toggle('hidden');
+      }
+    </script>
 </body>
 
 

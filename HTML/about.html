@@ -99,10 +99,12 @@
         padding: 0;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap; /* Make the list wrap on smaller screens */
       }
       .skill-list li {
         flex: 1;
         text-align: center;
+        min-width: 120px; /* Ensure a minimum width for each item */
       }
       .skill-list i {
         font-size: 3rem;
@@ -186,9 +188,9 @@
         transition: all ease 1s;
         color: rgb(36, 36, 176);
       }
-          .myname:hover {
-      font-weight: 700;
-      background-image: linear-gradient(to right,
+      .myname:hover {
+        font-weight: 700;
+        background-image: linear-gradient(to right,
           blue,
           purple,
           magenta,
@@ -196,18 +198,17 @@
           yellow,
           orange,
           red);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Poppins", sans-serif;
-      text-align: center;
-      cursor: pointer !important;
-      transition: all ease-in-out 1.5s
-    }
-
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        cursor: pointer !important;
+        transition: all ease-in-out 1.5s
+      }
     </style>
   </head>
   <body>
@@ -220,10 +221,19 @@
           <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
           <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
         </div>
+        <div class="md:hidden">
+          <button class="text-gray-400 hover:text-white focus:outline-none focus:text-white" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="md:hidden hidden mobile-nav">
+        <a id="about" class="block py-2 px-4 text-sm hover:text-gray-400" href="./about.html">About Me</a>
+        <a id="projects" class="block py-2 px-4 text-sm hover:text-gray-400" href="./projects.html">Projects</a>
+        <a id="contact" class="block py-2 px-4 text-sm hover:text-gray-400" href="./contact.html">Contact</a>
+        <a id="software" class="block py-2 px-4 text-sm hover:text-gray-400" href="./software.html">Software I Use</a>
       </div>
     </nav>
-  
-
     <div class="content">
       <div id="compilation-container">
       <video id="compilation" height="auto" height="900" width="400">
@@ -322,5 +332,12 @@
     <script src="../JS/index.js"></script>
     <script src="../JS/removeContextMenu.js"></script>
     <script src="../JS/playVideoOnHover.js"></script>
+    <!-- In file JS for responsiveness -->
+    <script>
+      function toggleMobileMenu() {
+        const mobileNav = document.querySelector('.mobile-nav');
+        mobileNav.classList.toggle('hidden');
+      }
+    </script>
   </body>
 </html>

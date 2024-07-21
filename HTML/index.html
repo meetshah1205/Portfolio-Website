@@ -1,267 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Meet Shah</title>
-
-  <style>
-    body {
-      background-color: #1c1e21;
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-      margin: 0;
-      transition: opacity 0.6s ease-in-out;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar-brand .meet,
-    .navbar-brand .shah {
-      transition: all ease-in 1s;
-    }
-
-    .navbar-brand:hover .meet {
-      color: #ff6f61;
-    }
-
-    .navbar-brand:hover .shah {
-      color: #d0736b;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      transition: color 0.3s ease-in-out;
-      margin: 0 1rem;
-      padding: 0.5rem 1rem;
-    }
-
-    .nav-link:hover {
-      color: #ff6f61 !important;
-    }
-
-    .navbar {
-      background-color: #1c1e21;
-    }
-
-    .navbar-nav {
-      margin: 0 auto;
-    }
-
-    .greet {
-      font-size: 3rem;
-      font-weight: 700;
-      background-image: linear-gradient(to right,
-          blue,
-          purple,
-          magenta,
-          cyan,
-          yellow,
-          orange,
-          red);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-top: 1rem;
-    }
-
-    #about,
-    #projects,
-    #contact,
-    #software {
-      opacity: 50%;
-    }
-
-    #about:hover,
-    #projects:hover,
-    #contact:hover,
-    #software:hover {
-      opacity: 100%;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Meet Shah</title>
+    <style>
+      body {
+        background-color: #1c1e21;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding-top: 70px; /* Adjusted for fixed navbar */
       }
-
-      100% {
-        opacity: 1;
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
       }
-    }
-
-    @keyframes slideIn {
-      0% {
-        transform: translateY(-10%);
+      .navbar-brand .meet,
+      .navbar-brand .shah {
+        transition: all ease-in 1s;
       }
-
-      100% {
-        transform: translateY(0);
+      .navbar-brand:hover .meet {
+        color: #ff6f61;
       }
-    }
-
-    @keyframes zoomIn {
-      0% {
-        transform: scale(0);
-        opacity: 0;
-        rotate: 100deg;
+      .navbar-brand:hover .shah {
+        color: #d0736b;
       }
-
-      50% {
-        transform: scale(0.5);
-        opacity: 1;
-        rotate: 0deg;
-      }
-
-      55% {
-        transform: scale(300);
-        opacity: 1;
-        overflow: hidden;
-        rotate: 175deg;
-      }
-
-      60%{
-        transform: scale(202);
-        rotate: 250deg;
-      }
-
-      65% {
-        transform: scale(150);
-        rotate: 300deg;
-      }
-      75% {
-        transform: scale(100);
-        opacity: 1;
-        overflow: hidden;
-        rotate: 350deg;
-      }
-
-      100% {
-        transform: scale(1);
-        opacity: 1;
-        rotate: 360deg;
-      }
-    }
-
-    .zoom-in {
-      animation: zoomIn 6s ease-in-out;
-    }
-
-    .myname:hover {
-      font-weight: 700;
-      background-image: linear-gradient(to right,
-          blue,
-          purple,
-          magenta,
-          cyan,
-          yellow,
-          orange,
-          red);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "Poppins", sans-serif;
-      text-align: center;
-      cursor: pointer !important;
-      transition: all ease-in-out 1.5s
-    }
-
-    @media screen and (max-width: 800px) {
       .nav-link {
         font-weight: 500;
         transition: color 0.3s ease-in-out;
-        margin: 0 0.5rem;
-        padding: 0.5rem 0.5rem;
+        margin: 0 1rem;
+        padding: 0.5rem 1rem;
+      }
+      .nav-link:hover {
+        color: #ff6f61 !important;
+      }
+      .navbar {
+        background-color: #1c1e21;
+      }
+      .navbar-nav {
+        margin: 0 auto;
       }
 
       .greet {
-        font-size: 2rem;
-        padding: 1rem;
+        font-size: 3rem;
+        font-weight: 700;
+        background-image: linear-gradient(
+          to right,
+          blue,
+          purple,
+          magenta,
+          cyan,
+          yellow,
+          orange,
+          red
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+
+      #about,
+      #projects,
+      #contact,
+      #software {
+        opacity: 50%;
+      }
+
+      #about:hover,
+      #projects:hover,
+      #contact:hover,
+      #software:hover {
+        opacity: 100%;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateY(-10%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes zoomIn {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+          rotate: 100deg;
+        }
+        50% {
+          transform: scale(0.5);
+          opacity: 1;
+          rotate: 0deg;
+        }
+        55% {
+          transform: scale(300);
+          opacity: 1;
+          overflow: hidden;
+          rotate: 175deg;
+        }
+        60% {
+          transform: scale(202);
+          rotate: 250deg;
+        }
+        65% {
+          transform: scale(150);
+          rotate: 300deg;
+        }
+        75% {
+          transform: scale(100);
+          opacity: 1;
+          overflow: hidden;
+          rotate: 350deg;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+          rotate: 360deg;
+        }
+      }
+
+      .zoom-in {
+        animation: zoomIn 6s ease-in-out;
       }
 
       .myname:hover {
-        height: auto;
-      }
-
-      .hidden.md\:flex {
-        display: none !important;
-      }
-
-      .mobile-nav {
-        display: flex !important;
-        flex-direction: column;
+        font-weight: 700;
+        background-image: linear-gradient(
+          to right,
+          blue,
+          purple,
+          magenta,
+          cyan,
+          yellow,
+          orange,
+          red
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        display: flex;
+        justify-content: center;
         align-items: center;
-      }
-
-      .mobile-nav a {
-        padding: 0.5rem 0;
+        font-family: "Poppins", sans-serif;
         text-align: center;
+        cursor: pointer !important;
+        transition: all ease-in-out 1.5s;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
-    <div class="container mx-auto flex justify-between items-center">
-      <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
-      <div class="hidden md:flex space-x-6">
-        <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
-        <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
-        <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
-        <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
+      @media screen and (max-width: 800px) {
+        .nav-link {
+          font-weight: 500;
+          transition: color 0.3s ease-in-out;
+          margin: 0 0.5rem;
+          padding: 0.5rem 0.5rem;
+        }
+
+        .greet {
+          font-size: 2rem;
+          padding: 1rem;
+        }
+
+        .myname:hover {
+          height: auto;
+        }
+
+        .hidden.md\:flex {
+          display: none !important;
+        }
+
+        .mobile-nav {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-nav.show {
+  display: flex; /* Show when .show class is added */
+}
+
+
+        .mobile-nav a {
+          padding: 0.5rem 0;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
+        <div class="hidden md:flex space-x-6">
+          <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
+          <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
+          <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
+          <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
+        </div>
+        <div class="md:hidden">
+          <button
+            class="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+            onclick="toggleMobileMenu()"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
       </div>
-      <div class="md:hidden mobile-nav">
-        <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
-        <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
-        <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
-        <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
+      <div class="mobile-nav hidden">
+        <a id="about" class="block py-2 px-4 text-sm hover:text-gray-400" href="./about.html">About Me</a>
+        <a id="projects" class="block py-2 px-4 text-sm hover:text-gray-400" href="./projects.html">Projects</a>
+        <a id="contact" class="block py-2 px-4 text-sm hover:text-gray-400" href="./contact.html">Contact</a>
+        <a id="software" class="block py-2 px-4 text-sm hover:text-gray-400" href="./software.html">Software I Use</a>
       </div>
+    </nav>
+    <div class="zoom-in">
+      <h3 class="greet">Welcome to my website...</h3>
     </div>
-  </nav>
-  <div class="zoom-in">
-    <h3 class="greet">Welcome to Meet Shah's website...</h3>
-  </div>
 
-  <!-- Bootstrap JS dependencies -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4/Jqs8+9z9vB1sI0e/ZxAVFTcEpcA8+W+f/qmfDEJ+zRf5iWpGYNFJkCs" crossorigin="anonymous"></script>
-  <!-- Local JS -->
-  <script src="../JS/index.js"></script>
-  <script src="../JS/removeContextMenu.js"></script>
-</body>
+    <script>
+function toggleMobileMenu() {
+  // console.log('Toggle button clicked'); // Debugging output
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (mobileNav) {
+    // console.log('Mobile nav found'); 
+    mobileNav.classList.toggle('show');
+    // console.log('Mobile nav show status:', mobileNav.classList.contains('show'));
+  } else {
+    console.error('Mobile nav not found');
+  }
+}
 
+    </script>
+    <!-- Local JS -->
+    <script src="../JS/index.js"></script>
+    <script src="../JS/removeContextMenu.js"></script>
+  </body>
 </html>
