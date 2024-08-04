@@ -10,3 +10,4 @@ Check the Wiki section for more information.
 
 
 # Site down for some fixes, don't know when it will be back online.
+# This can continue for an indefinate amount of time depending on my mood.
