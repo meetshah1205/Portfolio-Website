@@ -1,196 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Meet Shah | Portfolio</title>
-    <style>
-      body {
-        background-color: #1c1e21;
-        font-family: "Poppins", sans-serif;
-        color: #fff;
-        margin: 0;
-        padding-top: 70px; /* Adjusted for fixed navbar */
-      }
-      .navbar-brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-      }
-      .navbar-brand .meet,
-      .navbar-brand .shah {
-        transition: all ease-in 1s;
-      }
-      .navbar-brand:hover .meet {
-        color: #ff6f61;
-      }
-      .navbar-brand:hover .shah {
-        color: #d0736b;
-      }
-      .nav-link {
-        font-weight: 500;
-        transition: color 0.3s ease-in-out;
-        margin: 0 1rem;
-        padding: 0.5rem 1rem;
-      }
-      .nav-link:hover {
-        color: #ff6f61 !important;
-      }
-      .navbar {
-        background-color: #1c1e21;
-      }
-      .navbar-nav {
-        margin: 0 auto;
-      }
-      .content {
-        padding: 2rem;
-      }
-      #compilation {
-        border-radius: 25px;
-      }
-      #compilation:hover{
-        margin: 5px;
-        transition: all ease-in-out 0.5s;
-        border-radius: 50px;
-      }
-      #compilation-container{
-        display: grid;
-        place-items: center;
-        background-color: transparent;
-      }
-      .about-section {
-        margin-top: 50px;
-      }
-      .about-section h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .about-section p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-      .skill-section {
-        margin-top: 50px;
-      }
-      .skill-section h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .skill-list {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; /* Make the list wrap on smaller screens */
-      }
-      .skill-list li {
-        flex: 1;
-        text-align: center;
-        min-width: 120px; /* Ensure a minimum width for each item */
-      }
-      .skill-list i {
-        font-size: 3rem;
-        color: #6c757d;
-        transition: color 0.3s ease-in-out;
-      }
-      .skill-list i:hover {
-        color: #ff6f61;
-      }
-      .experience-section {
-        margin-top: 50px;
-      }
-      .experience-section h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .experience-list {
-        list-style-type: none;
-        padding: 0;
-      }
-      .experience-item {
-        margin-bottom: 1.5rem;
-      }
-      .experience-item .title {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #d0736b;
-        margin-bottom: 0.5rem;
-      }
-      .experience-item .company {
-        font-size: 1.1rem;
-        color: #6c757d;
-      }
-      .experience-item .date {
-        font-size: 0.9rem;
-        color: #6c757d;
-      }
-      .extra-details {
-        margin-top: 50px;
-      }
-      .extra-details h2 {
-        color: #ff6f61;
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      .extra-details ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      .extra-details li {
-        margin-bottom: 0.5rem;
-      }
-      .zoom-in {
-        animation: zoomIn 0.6s ease-in-out;
-      }
-      #html:hover {
-        color: orangered;
-        transition: all ease 1s;
-      }
-      #css:hover {
-        color: rgb(48, 48, 230) !important;
-        transition: all ease 1s;
-      }
-      #python:hover {
-        background: linear-gradient(to bottom, blue, yellow);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: all ease 1s;
-        background-color: transparent !important;
-      }
-      #js:hover {
-        color: yellow;
-        border-radius: 50px;
-        transition: all ease 1s;
-      }
-      #clang:hover:hover {
-        transition: all ease 1s;
-        color: rgb(36, 36, 176);
-      }
-      .myname:hover {
-        font-weight: 700;
-        background-image: linear-gradient(to right,
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Meet Shah | Portfolio</title>
+  <style>
+    .current {
+      background-color: rgb(37, 132, 211);
+      border-radius: 100px;
+      padding: 10px;
+    }
+
+    body {
+      background-color: #1c1e21;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      margin: 0;
+      padding-top: 70px;
+      /* Adjusted for fixed navbar */
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .navbar-brand .meet,
+    .navbar-brand .shah {
+      transition: all ease-in 1s;
+    }
+
+    .navbar-brand:hover .meet {
+      color: #ff6f61;
+    }
+
+    .navbar-brand:hover .shah {
+      color: #d0736b;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-link:hover {
+      color: #ff6f61 !important;
+    }
+
+    .navbar {
+      background-color: #1c1e21;
+    }
+
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .img-container {
+      display: grid;
+      place-items: center;
+      border-radius: 20%;
+    }
+
+    .about-section {
+      margin-top: 50px;
+    }
+
+    .about-section h2 {
+      color: #ff6f61;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .skill-section {
+      margin-top: 50px;
+    }
+
+    .skill-section h2 {
+      color: #ff6f61;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .skill-list {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      /* Make the list wrap on smaller screens */
+    }
+
+    .skill-list li {
+      flex: 1;
+      text-align: center;
+      min-width: 120px;
+      /* Ensure a minimum width for each item */
+    }
+
+    .skill-list i {
+      font-size: 3rem;
+      color: #6c757d;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .skill-list i:hover {
+      color: #ff6f61;
+    }
+
+    .experience-section {
+      margin-top: 50px;
+    }
+
+    .experience-section h2 {
+      color: #ff6f61;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .experience-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .experience-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .experience-item .title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #d0736b;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-item .company {
+      font-size: 1.1rem;
+      color: #6c757d;
+    }
+
+    .experience-item .date {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+
+    .extra-details {
+      margin-top: 50px;
+    }
+
+    .extra-details h2 {
+      color: #ff6f61;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .extra-details ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .extra-details li {
+      margin-bottom: 0.5rem;
+    }
+
+    .zoom-in {
+      animation: zoomIn 0.6s ease-in-out;
+    }
+
+    #html:hover {
+      color: orangered;
+      transition: all ease 1s;
+    }
+
+    #css:hover {
+      color: rgb(48, 48, 230) !important;
+      transition: all ease 1s;
+    }
+
+    #python:hover {
+      background: linear-gradient(to bottom, blue, yellow);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all ease 1s;
+      background-color: transparent !important;
+    }
+
+    #js:hover {
+      color: yellow;
+      border-radius: 50px;
+      transition: all ease 1s;
+    }
+
+    #clang:hover:hover {
+      transition: all ease 1s;
+      color: rgb(36, 36, 176);
+    }
+
+    .myname:hover {
+      font-weight: 700;
+      background-image: linear-gradient(to right,
           blue,
           purple,
           magenta,
@@ -198,146 +228,141 @@
           yellow,
           orange,
           red);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Poppins", sans-serif;
-        text-align: center;
-        cursor: pointer !important;
-        transition: all ease-in-out 1.5s
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
-      <div class="container mx-auto flex justify-between items-center">
-        <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
-        <div class="hidden md:flex space-x-6">
-          <a id="about" class="hover:text-gray-400" href="./about.html">About Me</a>
-          <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
-          <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
-          <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
-        </div>
-        <div class="md:hidden">
-          <button class="text-gray-400 hover:text-white focus:outline-none focus:text-white" onclick="toggleMobileMenu()">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      cursor: pointer !important;
+      transition: all ease-in-out 1.5s
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-gray-800 p-4 fixed w-full z-10 top-0">
+    <div class="container mx-auto flex justify-between items-center">
+      <a class="text-2xl font-bold myname" href="./index.html">Meet Shah</a>
+      <div class="hidden md:flex space-x-6">
+        <a id="about" class="hover:text-gray-400 current" href="./about.html">About Me</a>
+        <a id="projects" class="hover:text-gray-400" href="./projects.html">Projects</a>
+        <a id="contact" class="hover:text-gray-400" href="./contact.html">Contact</a>
+        <a id="software" class="hover:text-gray-400" href="./software.html">Software I Use</a>
       </div>
-      <div class="md:hidden hidden mobile-nav">
-        <a id="about" class="block py-2 px-4 text-sm hover:text-gray-400" href="./about.html">About Me</a>
-        <a id="projects" class="block py-2 px-4 text-sm hover:text-gray-400" href="./projects.html">Projects</a>
-        <a id="contact" class="block py-2 px-4 text-sm hover:text-gray-400" href="./contact.html">Contact</a>
-        <a id="software" class="block py-2 px-4 text-sm hover:text-gray-400" href="./software.html">Software I Use</a>
+      <div class="md:hidden">
+        <button class="text-gray-400 hover:text-white focus:outline-none focus:text-white" onclick="toggleMobileMenu()">
+          <i class="fa fa-bars"></i>
+        </button>
       </div>
-    </nav>
-    <div class="content">
-      <div id="compilation-container">
-      <video id="compilation" height="auto" height="900" width="400">
-        <source src="../Assets/Vids/Compilation.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
     </div>
-      <section id="about-section" class="about-section">
-        <div class="container">
-          <h2>About Me</h2>
-          <p>
-            Hello! I'm Meet Shah, a passionate coder exploring various
-            technologies and building exciting projects. My coding journey
-            started in June 2023, and since then, I've dived into
-            <span id="html">HTML</span>, <span id="css">CSS</span>,
-            <span id="python"><span id="pyt">Pyt</span><span id="hon">hon</span></span>,
-            <span id="js"><span id="java">Java</span><span id="script">Script</span></span>,
-            and <span id="c">C</span>.
-          </p>
-        </div>
-      </section>
-
-      <section id="skills-section" class="skill-section">
-        <div class="container">
-          <h2>Skills</h2>
-          <ul class="skill-list">
-            <li>
-              <i id="html" class="fab fa-html5"></i>
-              <p id="htmlp">HTML</p>
-            </li>
-            <li>
-              <i id="css" class="fab fa-css3-alt"></i>
-              <p>CSS</p>
-            </li>
-            <li>
-              <i id="python" class="fab fa-python"></i>
-              <p>Python</p>
-            </li>
-            <li>
-              <i id="js" class="fab fa-js"></i>
-              <p>JavaScript</p>
-            </li>
-            <li>
-              <i id="clang" class="fas fa-c"></i>
-              <p>C</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="achievements-section" class="achievement">
-        <div class="container">
-          <h2>My Achievements</h2>
-          <ul>
-            <li>Learnt to code at the age of 12 in June 2023.</li>
-            <li>
-              Published my first website,
-              <a
-                href="https://cybergaurdian.freewebhostmost.com/index.html"
-                style="text-decoration: none"
-                target="_blank"
-                ><span style="color: #954f36">Cyberguardian</span></a
-              >, in October 2023.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="extra-details-section" class="extra-details">
-        <div class="container">
-          <h2>Extra Details</h2>
-          <ul>
-            <li>
-              Born on
-              <span style="color: rgb(227, 227, 49)">12/05/2011</span> in
-              Ahmedabad, Gujarat, India.
-            </li>
-            <li>
-              Attended Nirman High School, Panchwati from Sr. KG - Standard 5.
-            </li>
-            <li>
-              Currently studying at Shree Vidhyanagar English Medium School.
-            </li>
-          </ul>
-        </div>
-      </section>
+    <div class="md:hidden hidden mobile-nav">
+      <a id="about" class="block py-2 px-4 text-sm hover:text-gray-400" href="./about.html">About Me</a>
+      <a id="projects" class="block py-2 px-4 text-sm hover:text-gray-400" href="./projects.html">Projects</a>
+      <a id="contact" class="block py-2 px-4 text-sm hover:text-gray-400" href="./contact.html">Contact</a>
+      <a id="software" class="block py-2 px-4 text-sm hover:text-gray-400" href="./software.html">Software I Use</a>
     </div>
+  </nav>
 
-    <!-- Bootstrap JS dependencies -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-LtrjvnR4/Jqs8+9z9vB1sI0e/ZxAVFTcEpcA8+W+f/qmfDEJ+zRf5iWpGYNFJkCs"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Local JS -->
-    <script src="../JS/index.js"></script>
-    <script src="../JS/removeContextMenu.js"></script>
-    <script src="../JS/playVideoOnHover.js"></script>
-    <!-- In file JS for responsiveness -->
-    <script>
-      function toggleMobileMenu() {
-        const mobileNav = document.querySelector('.mobile-nav');
-        mobileNav.classList.toggle('hidden');
-      }
-    </script>
-  </body>
+  <div class="img-container">
+    <img id="compilation-image" src="../Assets/Imgs/Not-Screenshots/current.jpg" alt="Compilation Image" width="400"
+      height="auto">
+  </div>
+
+  <section id="about-section" class="about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Meet Shah, a passionate coder exploring various
+        technologies and building exciting projects. My coding journey
+        started in June 2023, and since then, I've dived into
+        <span id="html">HTML</span>, <span id="css">CSS</span>,
+        <span id="python"><span id="pyt">Pyt</span><span id="hon">hon</span></span>,
+        <span id="js"><span id="java">Java</span><span id="script">Script</span></span>,
+        and <span id="c">C</span>.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills-section" class="skill-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>
+          <i id="html" class="fab fa-html5"></i>
+          <p id="htmlp">HTML</p>
+        </li>
+        <li>
+          <i id="css" class="fab fa-css3-alt"></i>
+          <p>CSS</p>
+        </li>
+        <li>
+          <i id="python" class="fab fa-python"></i>
+          <p>Python</p>
+        </li>
+        <li>
+          <i id="js" class="fab fa-js"></i>
+          <p>JavaScript</p>
+        </li>
+        <li>
+          <i id="clang" class="fas fa-c"></i>
+          <p>C</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="achievements-section" class="achievement">
+    <div class="container">
+      <h2>My Achievements</h2>
+      <ul>
+        <li>Learnt to code at the age of 12 in June 2023.</li>
+        <li>
+          Published my first website,
+          <a href="https://cybergaurdian.freewebhostmost.com/index.html" style="text-decoration: none"
+            target="_blank"><span style="color: #954f36">Cyberguardian</span></a>, in October 2023.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="extra-details-section" class="extra-details">
+    <div class="container">
+      <h2>Extra Details</h2>
+      <ul>
+        <li>
+          Born on
+          <span style="color: rgb(227, 227, 49)">12/05/2011</span> in
+          Ahmedabad, Gujarat, India.
+        </li>
+        <li>
+          Attended Nirman High School, Panchwati from Sr. KG - Standard 5.
+        </li>
+        <li>
+          Currently studying at Shree Vidhyanagar English Medium School.
+        </li>
+      </ul>
+    </div>
+  </section>
+  </div>
+
+  <!-- Bootstrap JS dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-LtrjvnR4/Jqs8+9z9vB1sI0e/ZxAVFTcEpcA8+W+f/qmfDEJ+zRf5iWpGYNFJkCs"
+    crossorigin="anonymous"></script>
+  <!-- Local JS -->
+  <script src="../JS/index.js"></script>
+  <script src="../JS/removeContextMenu.js"></script>
+  <script src="../JS/playVideoOnHover.js"></script>
+  <!-- In file JS for responsiveness -->
+  <script>
+    function toggleMobileMenu() {
+      const mobileNav = document.querySelector('.mobile-nav');
+      mobileNav.classList.toggle('hidden');
+    }
+  </script>
+</body>
+
 </html>
