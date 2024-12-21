@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet Shah - Portfolio</title>
     <script src="https://kit.fontawesome.com/88cf7528db.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -76,6 +80,28 @@
             margin-bottom: 40px;
         }
 
+        #html-bracket-left {
+            opacity: 0;
+            display: none;
+        }
+
+        #html-bracket-right {
+            opacity: 0;
+            display: none;
+        }
+
+        #lang-knows-html:hover {
+            color: #e44d26;
+            transition: all ease-in-out 200ms;
+            cursor: none;
+        }
+
+        #lang-knows-html:hover span {
+            opacity: 1;
+            display: inline;
+            transition: all ease 0.97s;
+        }
+
         .age-counter {
             font-family: 'Roboto Mono', monospace;
             font-size: 1.2rem;
@@ -120,7 +146,8 @@
             border-radius: 5px;
         }
 
-        .contact form input, .contact form textarea {
+        .contact form input,
+        .contact form textarea {
             width: 100%;
             margin-bottom: 15px;
             padding: 10px;
@@ -184,6 +211,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -195,6 +223,7 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -208,15 +237,20 @@
         }
 
         @keyframes bounce {
-            0%, 80%, 100% {
+
+            0%,
+            80%,
+            100% {
                 transform: scale(0);
             }
+
             40% {
                 transform: scale(1);
             }
         }
     </style>
 </head>
+
 <body>
     <div class="loading" id="loading">
         <div></div>
@@ -235,7 +269,15 @@
 
     <header>
         <h1>Hello, I'm <span>Meet Shah</span></h1>
-        <p>A passionate learner exploring <strong>HTML/CSS/JS</strong> and <strong>Rust</strong>.</p>
+        <p>A passionate learner exploring
+            <strong>
+                <span id="lang-knows-html"><span id="html-bracket-left">
+                        <</span>HTML<span id="html-bracket-right">></span>
+                    </span>/
+                    <span id="lang-knows-css">CSS</span>/
+                    <span id="lang-knows-js">JS</span>
+            </strong> and <strong>Rust</strong>.
+        </p>
         <div class="age-counter" id="age-counter">Calculating age...</div>
     </header>
 
@@ -249,9 +291,14 @@
         <div>
             <p>Feel free to reach out on my socials:</p>
             <ul style="list-style: none; padding: 0;">
-                <li><i class="fa-brands fa-github"></i>&nbsp;&nbsp;<a href="https://github.com/meetshah1205" target="_blank" style="text-decoration: none;"><span style="color:#00c6ff;">GitHub</span></a></li>
-                <li><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:meetshah9625@gmail.com" style="text-decoration: none;"><span style="color:#00c6ff;">GMail</span></a></li>
-                <li><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;<a href="https://www.instagram.com/envixy_/" target="_blank" style="text-decoration: none;"><span style="color:#00c6ff;">Instagram</span></a></li>
+                <li><i class="fa-brands fa-github"></i>&nbsp;&nbsp;<a href="https://github.com/meetshah1205"
+                        target="_blank" style="text-decoration: none;"><span style="color:#00c6ff;">GitHub</span></a>
+                </li>
+                <li><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:meetshah9625@gmail.com"
+                        style="text-decoration: none;"><span style="color:#00c6ff;">GMail</span></a></li>
+                <li><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;<a href="https://www.instagram.com/envixy_/"
+                        target="_blank" style="text-decoration: none;"><span style="color:#00c6ff;">Instagram</span></a>
+                </li>
             </ul>
         </div>
     </section>
@@ -290,4 +337,5 @@
         window.addEventListener('load', hideLoadingScreen);
     </script>
 </body>
+
 </html>
